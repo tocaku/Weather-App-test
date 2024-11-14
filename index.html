@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Weather App</h1>
+
+      <!-- Поле ввода города с автокомплитом -->
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Введіть місто"
+        autocomplete="off"
+      />
+      <ul id="autocomplete-list"></ul>
+      <button id="add-city-btn">Додати місто</button>
+
+      <!-- Контейнер для блоков погоды -->
+      <div id="weather-container"></div>
+
+      <!-- Вкладка избранного -->
+      <div id="favorites-tab">
+        <h2>Вибране</h2>
+        <div id="favorites-container"></div>
+      </div>
+    </div>
+    <div id="confirmation-modal">
+      <div class="modal-content">
+        <p>
+          Вы можете добавить только 5 городов. Удалите один, чтобы добавить
+          новый.
+        </p>
+        <button id="close-modal-btn">Закрыть</button>
+      </div>
+    </div>
+    <div id="user-location-weather">
+      <div id="user-location-loader" class="loader">Загрузка...</div>
+    </div>
+    <!-- Блок для отображения города пользователя -->
+
+    <!-- Подключение библиотеки Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Подключение основного JS кода -->
+    <script src="app.js"></script>
+  </body>
+</html>
